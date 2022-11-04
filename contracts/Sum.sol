@@ -2,7 +2,13 @@
 pragma solidity ^0.8.9;
 
 contract Sum {
-    function sum(uint num1, uint num2) internal pure returns (uint) {
-        return num1 + num2;
+    uint sum;
+
+    function sumNumbers(uint num1, uint num2) public {
+        sum = num1 + num2;
+    }
+
+    function getSum() public view returns (uint) {
+        return sum;
     }
 }
